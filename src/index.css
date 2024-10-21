@@ -4,15 +4,15 @@
 
 button {
   cursor: pointer;
-  font-size: 24px; /* Adjust size */
-  border: none; /* Remove border */
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent */
-  border-radius: 50%; /* Circular */
-  padding: 10px; /* Adjust padding */
-  transition: background-color 0.3s; /* Smooth hover transition */
+  font-size: 24px; 
+  border: none; 
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 50%; 
+  padding: 10px; 
+  transition: background-color 0.3s; 
 }
 
 button:hover {
-  background-color: rgba(255, 255, 255, 1); /* Change on hover */
+  background-color: rgba(255, 255, 255, 1); 
   color: rgb(59 130 246 / var(--tw-bg-opacity)) ;
 }
