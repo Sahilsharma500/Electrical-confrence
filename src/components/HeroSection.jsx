@@ -18,36 +18,68 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative w-full h-screen flex overflow-hidden">
+    <div className="flex min-h-screen overflow-x-visible">
+
       <div
-        className="w-3/5 h-full bg-cover bg-center transition-opacity duration-500 ease-in-out"
+        className="flex-grow w-[80vw] bg-cover bg-center transition-opacity duration-500 ease-in-out overflow-x-visible"
         style={{
           backgroundImage: `url(${images[currentImage]})`,
-          clipPath: 'polygon(0 0, 0% 100%, 100% 100%, 82% 0)', 
+          clipPath: 'polygon(0 0, 0% 100%, 100% 100%, 82% 0)',
         }}
-      ></div>
-      <div className="w-2/5 h-full flex flex-col justify-center bg-white text-black px-10 ml-40">
-        <h1 className="text-5xl font-bold mb-4">CDC 2025</h1>
-        <p className="text-xl mb-4">
-          64th IEEE Conference on Decision and Control <br />
-          December 10-12, 2025
-        </p>
-        <div className="mt-6">
-          <button className="bg-blue-500 px-6 py-3 rounded-lg text-lg text-white">Download Call for Papers</button>
-          <button className="ml-4 px-6 py-3 rounded-lg border-2 border-black text-lg">Contact Us</button>
+      >
+        <div className="flex justify-between items-center h-full px-4 my-auto">
+          <button
+            onClick={prevImage}
+            className="rounded-3xl bg-white px-1 py-0  opacity-90 hover:opacity-100"
+          >
+            &lt;
+          </button>
+          
         </div>
       </div>
+        <div className='flex  flex-col justify-center items-center h-full px-4 my-auto'>
+        <button
+            onClick={nextImage}
+            className="rounded-3xl bg-white px-1 py-0  opacity-90 hover:opacity-100 mr-20"
+            style={{ marginLeft: 'auto' }} 
+          >
+            &gt;
+          </button>
+        </div>
 
+      <div className="flex flex-col justify-between w-[50vw] h-full bg-white text-black px-8 py-8 ml-10 mr-20">
+        <div className="flex items-center mb-4">
+          <img
+            src="https://confcats-siteplex.s3.us-east-1.amazonaws.com/cdc25/large_Logo_CDC_2025_3e6db1dc79.png"
+            alt="CDC 2025 Logo"
+            className="ml-auto w-[90%] h-auto object-contain"
+          />
+        </div>
 
-      <div className="absolute top-1/2 transform -translate-y-1/2 left-4">
-        <button onClick={prevImage} className="rounded-full bg-white p-2 shadow-lg">
-          &lt;
-        </button>
-      </div>
-      <div className="absolute top-1/2 transform -translate-y-1/2 right-[calc(50%-20px)]"> 
-        <button onClick={nextImage} className="rounded-full bg-white p-2 shadow-lg">
-          &gt;
-        </button>
+        <div className="flex flex-col justify-start items-start space-y-2">
+          <div className="font-semibold border border-black rounded-lg px-4 py-1 text-[1.5vw]">
+            DECEMBER 10–12, 2025
+          </div>
+          <div className="text-[1vw] font-semibold text-gray-500">
+            National Institute of Technology, Hamirpur
+          </div>
+        </div>
+
+        <div className="mt-4">
+          <p className="text-[2vw] font-bold">CDC 2025</p>
+          <p className="text-[1.5vw] italic font-semibold mt-2">
+            64<sup>th</sup> IEEE Conference on Decision and Control
+          </p>
+        </div>
+
+        <div className="mt-4 text-justify text-[1.1vw] text-gray-600 leading-relaxed">
+          The CDC is recognized as the premier scientific and engineering conference dedicated to
+          the advancement of the theory and practice of systems and control. The CDC annually
+          brings together an international community of researchers and practitioners in the field
+          of control systems to discuss new research results, perspectives on future developments,
+          and innovative applications relevant to decision-making, systems, automatic control,
+          optimization, and related areas.
+        </div>
       </div>
     </div>
   );
