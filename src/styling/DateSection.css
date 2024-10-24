@@ -1,0 +1,47 @@
+.datemain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    padding: 0;
+    background-color: #002868;
+    color: white;
+    font-weight: bold;
+}
+.pone{
+    margin-top: 50px;  
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+.ptwo{
+    margin-top: 0;   
+    font-size: 40px;
+}
+.dateboxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.datebox{
+    background-color: white;
+    border-radius: 15px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vw;
+    width: 25vw;
+}
+.datepone{
+    font-size: 20px;
+    font-weight: bold;
+    color: #002868;
+}
+.dateptwo{
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-top: 5px;
+}

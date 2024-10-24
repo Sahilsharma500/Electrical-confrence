@@ -1,18 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+*{
+  margin: 0;
+  padding: 0;
+}
 
 button {
   cursor: pointer;
   font-size: 24px; 
   border: none; 
-  background-color: rgba(255, 255, 255, 0.8); 
+  background-color: rgba(193, 188, 188, 0.8); 
   border-radius: 50%; 
   padding: 10px; 
   transition: background-color 0.3s; 
 }
 
 button:hover {
-  background-color: rgba(255, 255, 255, 1); 
+  background-color: rgb(185, 175, 175); 
   color: rgb(59 130 246 / var(--tw-bg-opacity)) ;
 }

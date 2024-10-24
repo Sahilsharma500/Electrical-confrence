@@ -1,0 +1,19 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px;
+    background-color: #00245D;
+    color: white;
+    font-size: 15px;
+}
+span{
+    font-weight: bold;
+}
+
+.footerleft{
+    width: 46%;
+}
+.footerright{
+    width: 46%;
+}
