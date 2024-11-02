@@ -1,106 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lexend:wght@100&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
 .hero-section {
-    display: flex;
-    min-height: 100vh;
-    overflow-x: visible;
-  }
+  display: flex;
+  width: 100%;
+  min-height: auto;
+}
+
+.left-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 60%;
+  height: 500px;
+  overflow: hidden;
+}
+.left-container img{
+  clip-path: polygon(0 0, 0% 100%, 100% 100%, 82% 0);
+}
+
+.right-container{
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 490px;
+  background-color: white;
+  color: black;
+  margin-left: 40px;
+  margin-right: 10px;
+  padding: 5px;
+  margin-top: 0px;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 50%;
+  font-size: 1rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0.4rem;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: -1px;
+}
+.logo{
+  display: flex;
+  justify-content: end;
+  margin-right: 30px;
+}
+.date{
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 200px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+.location{
+  margin-top: 4px;
+  font-weight: bold;
+}
+.head{
+  margin-top: 2px;
+  font-weight: bold;
+}
+.sub-head{
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.descriptive-text{
+  margin-top: 0px;
+  padding: 5px;
+  line-height: 1.3rem;
   
-  .image-container {
-    flex-grow: 1;
-    width: 80vw;
-    background-size: cover;
-    background-position: center;
-    transition: opacity 0.5s ease-in-out;
-    clip-path: polygon(0 0, 0% 100%, 100% 100%, 82% 0);
-    overflow-x: visible;
-    position: relative;
-  }
-  
-  .image-navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    padding: 0 16px;
-    margin: auto 0;
-  }
-  
-  .nav-button {
-    border-radius: 50px;
-    background-color: white;
-    padding: 2px 4px;
-    opacity: 0.9;
-    transition: opacity 0.3s;
-  }
-  
-  .nav-button:hover {
-    opacity: 1;
-  }
-  
-  .text-container {
+}
+
+
+@media (max-width: 900px) {
+  .hero-section{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 50vw;
-    height: 100%;
-    background-color: white;
-    color: black;
-    padding: 32px;
-    margin-left: 40px;
-    margin-right: 80px;
-  }
-  
-  .logo-container {
-    display: flex;
     align-items: center;
-    margin-bottom: 16px;
+    height: 900px;
+    min-height: auto;
   }
-  
-  .logo-image {
-    margin-left: auto;
+  .left-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 90%;
-    height: auto;
-    object-fit: contain;
+    height: 300px;
   }
-  
-  .text-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 8px;
+  .left-container img{
+    clip-path: none;
+    height: 265px;
   }
-  
-  .date-box {
-    font-weight: 600;
-    border: 1px solid black;
-    border-radius: 8px;
-    padding: 4px 16px;
-    font-size: 1.5vw;
+  .right-container{
+    width: 100%;
   }
-  
-  .location-text {
-    font-size: 1vw;
-    font-weight: 600;
-    color: gray;
-  }
-  
-  .main-title {
-    font-size: 2vw;
-    font-weight: bold;
-  }
-  
-  .sub-title {
-    font-size: 1.5vw;
-    font-style: italic;
-    font-weight: 600;
-    margin-top: 8px;
-  }
-  
-  .description-text {
-    margin-top: 16px;
-    text-align: justify;
-    font-size: 1.1vw;
-    color: gray;
-    line-height: 1.6;
-  }
-  
+}
